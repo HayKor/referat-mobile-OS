@@ -148,7 +148,7 @@
   // -----------------------------------------------------------
   set bibliography(
     style: "gost-r-705-2008-numeric",
-    title: [#upper[Список использованных источников]],
+    title: [Список использованных источников],
   )
 
   show bibliography: set text(size: 14pt)
