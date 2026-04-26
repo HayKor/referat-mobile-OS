@@ -1,9 +1,9 @@
-#import "settings/settings.typ": *
+#import "include/settings.typ": *
 
 #set document(
   title:  "Мобильные операционные системы и приложения: современное состояние и применение в корпоративной и атомной отрасли",
-  author: "Автор",
-  date:   datetime(year: 2026, month: 5, day: 1),
+  author: "Багинян Артур Варданович",
+  date:   datetime(year: 2026, month: 4, day: 26),
 )
 
 // --- Применить все настройки ГОСТ ---
@@ -19,7 +19,7 @@
 // =============================================================
 
 // Введение
-#include "include/00_intro.typ"
+#include "chapters/00_intro.typ"
 #pagebreak()
 
 // Глава 1 — Обзор современных мобильных ОС
