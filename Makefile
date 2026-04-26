@@ -10,7 +10,7 @@ OUTPUT_PDF = Багинян_А_В_реферат_Мобильные_ОС.pdf
 
 all: $(OUTPUT_PDF)
 
-$(TEMP_PDF): $(TYPST_MAIN) $(BIB_FILE) $(SRC_PREFIX)include/*.typ $(SRC_PREFIX)settings/*.typ
+$(TEMP_PDF): $(TYPST_MAIN) $(BIB_FILE) $(SRC_PREFIX)include/*.typ $(SRC_PREFIX)chapters/*.typ
 	typst compile $(TYPST_MAIN) $(TEMP_PDF)
 
 $(OUTPUT_PDF): $(TEMP_PDF)

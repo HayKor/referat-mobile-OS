@@ -39,8 +39,8 @@
 
   set par(
     justify:           true,
-    leading:           0.75em,
-    spacing:           1.5em,
+    leading:           0.75em,  // Межстрочный интервал (~1.5)
+    spacing:           0.75em,  // Расстояние МЕЖДУ абзацами (равно leading, чтобы не было разрыва)
     first-line-indent: (amount: 1.25cm, all: true),
   )
 
@@ -51,26 +51,6 @@
   //  H3 — влево, жирный курсив
   // -----------------------------------------------------------
   set heading(numbering: "1.1.")
-
-  show heading.where(level: 1): it => {
-    v(2em, weak: true)
-    align(center)[
-      #text(size: 14pt, weight: "bold")[#upper(it.body)]
-    ]
-    v(1em, weak: true)
-  }
-
-  show heading.where(level: 2): it => {
-    v(2em, weak: true)
-    text(size: 14pt, weight: "bold")[#it.body]
-    v(1em, weak: true)
-  }
-
-  show heading.where(level: 3): it => {
-    v(1.5em, weak: true)
-    text(size: 14pt, weight: "bold", style: "italic")[#it.body]
-    v(0.75em, weak: true)
-  }
 
   // -----------------------------------------------------------
   //  4. ОГЛАВЛЕНИЕ  (ГОСТ 7.32 §6.4)
@@ -156,19 +136,25 @@
   // -----------------------------------------------------------
   //  10. КОД / ЛИСТИНГИ
   // -----------------------------------------------------------
-  show raw.where(block: true): it => {
-    block(
-      width:  100%,
-      inset:  8pt,
-      radius: 3pt,
-      fill:   luma(245),
-      stroke: 0.5pt + luma(180),
-      text(font: ("Courier New", "DejaVu Sans Mono"), size: 11pt, it),
-    )
-  }
-
-  show raw.where(block: false): it => {
-    text(font: ("Courier New", "DejaVu Sans Mono"), size: 12pt, it)
+  show raw.where(block: false): box.with(
+    fill: luma(240),
+    inset: (x: 3pt, y: 0pt),
+    outset: (y: 3pt),
+    radius: 2pt,
+  )
+  show raw: set text(font: "JetBrainsMono NF")
+  show raw.where(block: true): block.with(
+    fill: luma(240),
+    inset: 10pt,
+    radius: 4pt,
+  )
+  show raw.where(block: true): code => {
+    show raw.line: line => {
+      text(fill: gray)[#line.number]
+      h(1em)
+      line.body
+    }
+    code
   }
 
   // -----------------------------------------------------------

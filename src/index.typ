@@ -23,8 +23,8 @@
 #pagebreak()
 
 // Глава 1 — Обзор современных мобильных ОС
-// #include "chapters/01_os_overview.typ"
-// #pagebreak()
+#include "chapters/01_os_overview.typ"
+#pagebreak()
 
 // Глава 2 — Применение в корпоративной сфере
 // #include "chapters/02_corporate.typ"
