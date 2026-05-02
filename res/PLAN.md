@@ -76,32 +76,31 @@
 - Определение и принцип работы
 - Инструменты: Android Studio / Kotlin, Xcode / Swift
 - Преимущества (производительность, доступ к API) и недостатки (стоимость, две кодовые базы)
-
 #### 4.2. Гибридные приложения (Hybrid & Cross-platform)
 
 - Определение и принцип работы
-- Стек: React Native, Flutter, Xamarin, MAUI
+- Стек: React Native, Flutter, Xamarin/MAUI
+- Kotlin Multiplatform (KMP) и Compose Multiplatform (CMP) — разделение бизнес-логики и UI
 - Сравнение подходов: «написать один раз» vs. нативность
 - Преимущества и компромиссы
-
 #### 4.3. Прогрессивные веб-приложения (PWA)
 
 - Определение: веб-технологии + возможности нативных приложений
 - Ключевые технологии: Service Workers, Web App Manifest, Push API
 - Ограничения на iOS vs. Android
 - Сценарии применения и ограничения в корпоративной среде
-
 ---
 
 ### Глава 5. Стек технологий мобильной разработки
 
 - Frontend-фреймворки и языки (Kotlin, Swift, Dart, JavaScript/TypeScript)
-- Кросс-платформенные фреймворки: Flutter vs. React Native — детальное сравнение
+- Кросс-платформенные фреймворки: Flutter vs. React Native vs. KMP/CMP — детальное сравнение
+- KMP (Kotlin Multiplatform): общий бизнес-слой + нативный UI на каждой платформе
+- CMP (Compose Multiplatform): общий UI поверх KMP через Compose
 - Backend и API: REST, GraphQL, gRPC
 - Инфраструктура: CI/CD для мобильных приложений (Fastlane, GitHub Actions, Bitrise)
 - Тестирование: Unit, UI, E2E (Espresso, XCTest, Detox)
 - Безопасность приложений: обфускация, certificate pinning, хранение секретов
-
 ---
 
 ### Глава 6. Особенности Enterprise-приложений

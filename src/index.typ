@@ -39,16 +39,16 @@
 // =============================================================
 
 // Глава 4 — Виды мобильных приложений
-// #include "chapters/04_app_types.typ"
-// #pagebreak()
+#include "chapters/04_app_types.typ"
+#pagebreak()
 
 // Глава 5 — Стек технологий
-// #include "chapters/05_tech_stack.typ"
-// #pagebreak()
+#include "chapters/05_tech_stack.typ"
+#pagebreak()
 
 // Глава 6 — Enterprise-приложения
-// #include "chapters/06_enterprise.typ"
-// #pagebreak()
+#include "chapters/06_enterprise.typ"
+#pagebreak()
 
 // =============================================================
 //  ЗАКЛЮЧЕНИЕ
