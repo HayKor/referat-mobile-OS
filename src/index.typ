@@ -27,12 +27,12 @@
 #pagebreak()
 
 // Глава 2 — Применение в корпоративной сфере
-// #include "chapters/02_corporate.typ"
-// #pagebreak()
+#include "chapters/02_corporate_use.typ"
+#pagebreak()
 
 // Глава 3 — Применение в атомной отрасли
-// #include "chapters/03_nuclear.typ"
-// #pagebreak()
+#include "chapters/03_nuclear.typ"
+#pagebreak()
 
 // =============================================================
 //  ЧАСТЬ II. МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ
