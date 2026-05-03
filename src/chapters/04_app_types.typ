@@ -212,6 +212,11 @@ JavaScript/TypeScript — наиболее распространённый ст
 
 ==== Архитектура и рендеринг
 
+#figure(
+  image("../images/flutter-arch.png", width: 80%),
+  caption: [Архитектура фреймворка Flutter],
+  kind: image,
+)
 Ключевое архитектурное решение Flutter радикально отличается
 от React Native: Flutter *не использует нативные UI-компоненты*.
 Вместо этого он получает чистый холст от платформы (через
@@ -253,6 +258,11 @@ Android, iOS, Web, macOS, Windows, Linux — что делает его
 
 === Kotlin Multiplatform (KMP) и Compose Multiplatform (CMP)
 
+#figure(
+  image("../images/kmp-proj-example.png", width: 80%),
+  caption: [Пример архитектуры KMP приложения@kotlin-official],
+  kind: image,
+)
 *Kotlin Multiplatform* (KMP) — технология JetBrains,
 получившая статус Stable в ноябре 2023 года @kmp-official.
 В отличие от Flutter и React Native, KMP реализует принципиально

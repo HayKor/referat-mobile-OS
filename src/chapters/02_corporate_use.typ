@@ -47,6 +47,11 @@
 Wi-Fi и VPN. *Enterprise Mobility Management* (EMM) расширяет MDM,
 добавляя управление приложениями (MAM) и контентом (MCM).
 
+#figure(
+  image("../images/mdm-diagram.png", width: 80%),
+  caption: [Диаграма архитектуры MDM],
+  kind: image,
+)
 Типовые функции EMM-платформы:
 
 — принудительное применение политик паролей и шифрования;
@@ -57,6 +62,7 @@ Wi-Fi и VPN. *Enterprise Mobility Management* (EMM) расширяет MDM,
   обновление, отзыв;
 — geo-fencing и мониторинг соответствия (compliance).
 
+#pagebreak()
 == Требования к корпоративным ОС
 
 Корпоративное применение предъявляет к мобильной ОС требования,
