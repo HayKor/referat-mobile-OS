@@ -77,42 +77,55 @@
     spacing:   0.5em,
   )
 
-  // -----------------------------------------------------------
+// -----------------------------------------------------------
   //  6. РИСУНКИ  (ГОСТ 7.32 §6.8)
-  //  «Рисунок N — Название» под рисунком, по центру, 12 пт
+  //  «Рисунок N.M — Название» под рисунком, по центру, 12 пт
   // -----------------------------------------------------------
+  
+  show heading.where(level: 1): it => {
+  counter(figure.where(kind: image)).update(0)
+  counter(figure.where(kind: table)).update(0)
+  it
+}
+
   show figure.where(kind: image): it => {
+    let chapter = counter(heading).get().at(0)
     v(0.5em)
     align(center, it.body)
     v(0.25em)
     align(center,
-      text(size: 12pt)[Рисунок #it.counter.display() — #it.caption.body]
+      text(size: 12pt)[Рисунок #chapter.#it.counter.display() — #it.caption.body]
     )
     v(0.5em)
   }
 
+  show ref: it => context {
+    let el = it.element
+    if el != none and el.func() == figure {
+      let chapter = counter(heading).at(el.location()).at(0)
+      let fig-num = counter(figure.where(kind: el.kind)).at(el.location()).at(0)
+      let kind-name = if el.kind == image { "Рис." } else if el.kind == table { "Таблица" } else { "Рисунок" }
+      [(см. #kind-name #chapter.#fig-num)]
+    } else {
+      it
+    }
+  }
+
   // -----------------------------------------------------------
   //  7. ТАБЛИЦЫ  (ГОСТ 7.32 §6.9 и ГОСТ 2.105-2019)
-  //  «Таблица N — Название» над таблицей, влево, 12 пт
+  //  «Таблица N.M — Название» над таблицей, влево, 12 пт
   //  Заголовок таблицы — жирный
   // -----------------------------------------------------------
   show figure.where(kind: table): it => {
+    let chapter = counter(heading).get().at(0)
     v(0.5em)
     align(left,
-      text(size: 12pt)[Таблица #it.counter.display() — #it.caption.body]
+      text(size: 14pt, style: "italic")[Таблица #chapter.#it.counter.display() — #it.caption.body]
     )
     v(0.25em)
     it.body
     v(0.5em)
   }
-
-  set table(
-    stroke: 0.5pt + black,
-    inset:  6pt,
-    align:  center + horizon,
-  )
-
-  show table.cell.where(y: 0): strong
 
   // -----------------------------------------------------------
   //  8. СНОСКИ

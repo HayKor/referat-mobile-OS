@@ -1,7 +1,3 @@
-// =============================================================
-//  chapters/01_android.typ — Глава 1.1. Android
-// =============================================================
-
 = Обзор современных мобильных ОС
 
 == Android
@@ -18,10 +14,10 @@ Project) под лицензией Apache 2.0, что позволяет про�
 
 #figure(
   image("../images/android-arch.png", width: 65%),
-  caption: [Архитектура ОС Androida@android-arch],
+  caption: [Архитектура ОС Android@android-arch],
   kind: image,
-)
-Архитектура Android построена по многоуровневому принципу @android-arch:
+) <android-arch-pic>
+Архитектура Android построена по многоуровневому принципу@android-arch-pic:
 
 — *Ядро Linux* (Linux Kernel) — нижний уровень стека; обеспечивает
 управление памятью, процессами, файловой системой, сетевым стеком
@@ -87,11 +83,11 @@ Android 10 Google отказалась от традиции именовани�
 сладостей (Cupcake, Donut, KitKat...) и перешла на числовую нумерацию.
 
 #figure(
-  image("../images/android-version-distribution-2025.png", width: 65%),
+  image("../images/android-version-distribution-2025.png", width: 60%),
   caption: [Распределение версий Android (1 декабря 2025)#footnote[Источник: https://composables.com/android-distribution-chart]],
   kind: image,
-)
-Ключевой проблемой экосистемы Android остаётся *фрагментация* —
+) <android-ver-dist>
+Ключевой проблемой экосистемы Android остаётся *фрагментация* @android-ver-dist —
 неравномерное распределение устройств по версиям ОС. В отличие от
 iOS, где обновления распространяются централизованно, Android-обновления
 проходят через несколько звеньев цепочки:
@@ -156,12 +152,12 @@ Apple: iPadOS, tvOS, watchOS и visionOS построены на её общем
 
 #figure(
   image("../images/ios-arch.png", width: 60%),
-  caption: [Архитектура iOS],
+  caption: [Архитектура iOS@apple-platform-security],
   kind: image,
-)
+) <ios-arch-pic>
 В основе iOS лежит микроядро *XNU* (X is Not Unix) — гибридное ядро,
 объединяющее компоненты Mach и BSD. Архитектура системы организована
-в четыре уровня абстракции @apple-platform-security:
+в четыре уровня абстракции @ios-arch-pic:
 
 — *Core OS* — нижний уровень: ядро XNU, драйверы, криптографическая
   подсистема (Secure Enclave Processor), Bluetooth и Wi-Fi-стек,
@@ -473,7 +469,7 @@ HAL), созданный и контролируемый Google. Linux-based О�
   image("../images/aurora-5.2.ui", width: 85%),
   caption: [Интерфейс Аврора ОС 5.2],
   kind: image,
-)
+) <aurora-ui-pic>
 Аврора ОС — флагманская российская мобильная операционная система,
 разработанная ООО «Открытая мобильная платформа» (ОМП) @wiki-aurora.
 С технической точки зрения система основана на *Sailfish OS* финской
@@ -488,8 +484,8 @@ HAL), созданный и контролируемый Google. Linux-based О�
   image("../images/aurora-arch.png", width: 80%),
   caption: [Архитектура ОС Аврора#footnote[Источник: https://developer.auroraos.ru/doc/platform/architecture]],
   kind: image,
-)
-Архитектурный стек «Авроры» принципиально отличается от Android:
+) <aurora-arch-pic>
+Архитектурный стек «Авроры» принципиально отличается от Android @aurora-arch-pic:
 
 — *Ядро*: стандартное ядро Linux;
 
@@ -532,13 +528,13 @@ TEE (Trusted Execution Environment) — аппаратно
 изолированная среда выполнения в составе процессора
 (ARM TrustZone). Обеспечивает доверенное хранение
 ключей и выполнение криптографических операций,
-физически изолированное от основной ОС.].
+физически изолированное от основной ОС.] @aurora-tee.
 
 #figure(
   image("../images/aurora-tee.png", width: 70%),
   caption: [TEE ОС Аврора],
   kind: image,
-)
+) <aurora-tee>
 ==== Применение
 
 Основная целевая аудитория «Авроры» — государственные органы и крупные
