@@ -1,4 +1,4 @@
-#import "/include/settings.typ": *
+#import "include/settings.typ": *
 
 #show: apply-gost
 

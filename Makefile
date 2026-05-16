@@ -3,7 +3,7 @@ RES_DIR    = res/
 BUILD_DIR  = build/
 
 TYPST_MAIN   = $(SRC_PREFIX)index.typ
-TYPST_REPORT = $(SRC_PREFIX)report/01_index.typ
+TYPST_REPORT = $(SRC_PREFIX)report.typ
 BIB_FILE     = $(SRC_PREFIX)ref/refs.bib
 
 TITLE_PAGE = $(RES_DIR)title.pdf
@@ -32,7 +32,7 @@ $(OUTPUT_PDF): $(TEMP_PDF) $(REPORT_PDF) $(SLIDES_HANDOUT_PDF)
 	     -- $(OUTPUT_PDF)
 
 $(REPORT_PDF): $(TYPST_REPORT)
-	typst compile --root src/. $(TYPST_REPORT) $(REPORT_PDF)
+	typst compile $(TYPST_REPORT) $(REPORT_PDF)
 
 $(SLIDES_PDF): $(SLIDES_PPTX)
 	libreoffice --headless --convert-to pdf --outdir $(BUILD_DIR) $(SLIDES_PPTX)
