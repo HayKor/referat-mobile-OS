@@ -60,3 +60,8 @@
 //  СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ
 // =============================================================
 #bibliography("ref/refs.bib")
+
+#pagebreak()
+#align(right)[Приложение А]
+#counter(heading).update(0) // update headers' count
+#include "report/01_index.typ"
