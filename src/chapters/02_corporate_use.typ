@@ -44,7 +44,7 @@ Wi-Fi и VPN. *Enterprise Mobility Management* (EMM) расширяет MDM,
 
 #figure(
   image("../images/mdm-diagram.png", width: 80%),
-  caption: [Диаграма архитектуры MDM],
+  caption: [Диаграмма архитектуры MDM],
   kind: image,
 ) <mdm-diagram>
 Типовые функции EMM-платформы:
