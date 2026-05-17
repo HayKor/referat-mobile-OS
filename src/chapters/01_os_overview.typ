@@ -466,7 +466,7 @@ HAL), созданный и контролируемый Google. Linux-based О�
 === Аврора ОС
 
 #figure(
-  image("../images/aurora-5.2.ui", width: 85%),
+  image("../images/aurora-5.2_ui.png", width: 85%),
   caption: [Интерфейс Аврора ОС 5.2],
   kind: image,
 ) <aurora-ui-pic>

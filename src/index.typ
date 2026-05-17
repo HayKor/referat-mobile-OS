@@ -9,7 +9,7 @@
 // Применить ГОСТ
 #show: apply-gost
 
-#counter(page).update(2)
+#counter(page).update(7)
 // Содержание
 #contents()
 
@@ -49,9 +49,18 @@
 // Использованные источники
 #bibliography("ref/refs.bib")
 
+// Приложение А - доклад
 #pagebreak()
 #heading(level: 1, numbering: none, outlined: true)[Приложение А]
+#heading(level: 2, numbering: none, outlined: false)[Доклад по теме]
 
 #show heading: set heading(outlined: false)
 #counter(heading).update(0)
 #include "report.typ"
+#pagebreak()
+#show heading: set heading(outlined: true)
+
+// Приложение Б - презентация
+#heading(level: 1, numbering: none, outlined: true)[Приложение Б]
+#heading(level: 2, numbering: none, outlined: false)[Графический материал]
+

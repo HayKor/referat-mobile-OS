@@ -7,6 +7,7 @@ TYPST_REPORT = $(SRC_PREFIX)report.typ
 BIB_FILE     = $(SRC_PREFIX)ref/refs.bib
 
 TITLE_PAGE = $(RES_DIR)title.pdf
+ASSIGNED_TITLE = $(RES_DIR)assigned_title.pdf
 TEMP_PDF   = $(BUILD_DIR)index.pdf
 
 SLIDES             = Багинян_А_В_доклад
@@ -26,9 +27,10 @@ $(TEMP_PDF): $(TYPST_MAIN) $(BIB_FILE) $(SRC_PREFIX)include/*.typ $(SRC_PREFIX)c
 
 $(OUTPUT_PDF): $(TEMP_PDF) $(REPORT_PDF) $(SLIDES_HANDOUT_PDF)
 	qpdf $(TEMP_PDF) \
-	     --pages $(TITLE_PAGE) 1 \
+	     --pages $(ASSIGNED_TITLE) 1-z \
+	             $(TITLE_PAGE) 1 \
 	             $(TEMP_PDF) 1-z \
-							 $(SLIDES_HANDOUT_PDF) 1-z \
+	             $(SLIDES_HANDOUT_PDF) 1-z \
 	     -- $(OUTPUT_PDF)
 
 $(REPORT_PDF): $(TYPST_REPORT)
