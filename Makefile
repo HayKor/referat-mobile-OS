@@ -6,9 +6,9 @@ TYPST_MAIN   = $(SRC_PREFIX)index.typ
 TYPST_REPORT = $(SRC_PREFIX)report.typ
 BIB_FILE     = $(SRC_PREFIX)ref/refs.bib
 
-TITLE_PAGE = $(RES_DIR)title.pdf
+TITLE_PAGE     = $(RES_DIR)title.pdf
 ASSIGNED_TITLE = $(RES_DIR)assigned_title.pdf
-TEMP_PDF   = $(BUILD_DIR)index.pdf
+TEMP_PDF       = $(BUILD_DIR)index.pdf
 
 SLIDES             = Багинян_А_В_доклад
 SLIDES_PPTX        = $(SLIDES).pptx
